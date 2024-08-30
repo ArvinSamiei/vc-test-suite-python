@@ -73,3 +73,35 @@ Outputted prompt:
 ```bash
 Enter a)V2.0 or b)V1.1: c)For generated VC's
 ```
+
+# If selecting Option A
+The validator will validate the test suites regarding the w3c data model V2.0 specification.
+
+Example output:
+```bash
+credential-status-missing-id-ok.json
+INFO:root:validating context
+INFO:root:Checking required attributes for VerifiableCredential.
+INFO:root:validating value of {'issuer': 'did:example:issuer', 'credentialSubject': {'id': 'did:example:subject'}, 'credentialStatus': {'type': 'CredentialStatusList2017'}} for VerifiableCredential
+INFO:root:Checking required attributes for issuer.
+INFO:root:validating value of did:example:issuer for @id
+INFO:root:Checking required attributes for credentialSubject.
+INFO:root:validating value of {'id': 'did:example:subject'} for @id
+INFO:root:Checking required attributes for credentialStatus.
+ERROR:root:Invalid URI: CredentialStatusList2017
+ERROR:root:Restriction Restriction.MustBeUrl is not satisfied for credentialStatus
+INFO:root:validating value of {'type': 'CredentialStatusList2017'} for @id
+wrong result for credential-status-missing-id-ok.json
+False
+-------------------------------------------
+credential-ok.json
+INFO:root:validating context
+INFO:root:Checking required attributes for VerifiableCredential.
+INFO:root:validating value of {'issuer': 'did:example:issuer', 'credentialSubject': {'id': 'did:example:subject'}} for VerifiableCredential
+INFO:root:Checking required attributes for issuer.
+INFO:root:validating value of did:example:issuer for @id
+INFO:root:Checking required attributes for credentialSubject.
+INFO:root:validating value of {'id': 'did:example:subject'} for @id
+True
+-------------------------------------------
+```
