@@ -1,9 +1,9 @@
 ## Files that are within the repository
 
-This repository contains a script(valid_vc_generator.py) for generating Verifiable credentials that abide by normative statements provided by the W3c data model 1.1 & 2.0 specification.This ensures that all the required attributes with a chosen set of arbitrary one are combined.It also contains a validator script(maximus_validator.py) that takes .json files in a seperate directory for checking whether a credential abides by the normative statements provided by the W3C Verifiable credential data model 1.1 & 2.0 specification. Their is also a report pdf(Report_DTLab.pdf) providing further clarification on the functionality of the two scripts along with a greater context of the purposes of these scripts. Their are also existing test suites that are used within this repository. The validator utilizes the test suites that either abide or violate the normative statements for w3c data model 1.1 which can be found in dtt-test-api/tests_scripts/input. Their are test suites within the repository tht abide or violate the normative statements for w3c data model 2.0 which can be found in tests/input.
+This repository contains a script(valid_vc_generator.py) for generating Verifiable credentials that abide by normative statements provided by the W3c data model 1.1 & 2.0 specification.This ensures that all the required attributes with a chosen set of arbitrary one are combined.It also contains a validator script(maximus_validator.py) that takes .json files in a seperate directory for checking whether a credential abides by the normative statements provided by the W3C Verifiable credential data model 1.1 & 2.0 specification. Their is also a report pdf(Report_DTLab.pdf) providing further clarification on the functionality of the two scripts along with a greater context of the purposes of these scripts. Their are also existing test suites that are used within this repository. The validator utilizes the test suites that either abide or violate the normative statements for w3c data model 1.1 which can be found in dtt-test-api/tests_scripts/input. Their are test suites within the repository that abide or violate the normative statements for w3c data model 2.0 which can be found in tests/input.
 
 ## Regarding the options for the Validator script
-Their are three options 
+Their are three options for the Validator option A is 
 
 
 ## Getting started
@@ -64,12 +64,12 @@ Example output of generating verifiable credentials:
   ◦['http://1edtech.edu/credentials/3732', {'id': 'http://1edtech.edu/credentials/3732'}] assigned to relatedResource
 ```
 
-For validating Verifiable credentials
+For validating Verifiable credentials:
 ```bash
 python3 maximus_validator.py
 ```
 
-Example results of valid
+Outputted prompt:
 ```bash
-
+Enter a)V2.0 or b)V1.1: c)For generated VC's
 ```
