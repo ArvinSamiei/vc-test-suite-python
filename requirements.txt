@@ -1,8 +1,0 @@
-cachetools==5.3.3
-frozendict==2.4.4
-lxml==5.2.2
-PyLD==2.0.4
-rfc3986==2.0.0
-uritools==4.0.3
-validators==0.28.3
--e git+ssh://git@github.com/DTLab-LabCN/vc-test-suite-python.git@baab63bb051d139af318df5f8a71403f8ac2dfdd#egg=vc_test_suite

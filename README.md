@@ -1,80 +1,8 @@
-# W3c Verifiable Credential Test-Suite
+# Running the Vc generator
+# 1. Enter "python3 valid_vc_generator.py" into the command prompt ensuring within the same directory
 
-This repository contains scripts for testing an input against the W3C Verifiable Credential data model 1.1 specification. 
+# To run the validator
+# 1. Enter "python3 maximus_validator.py" into the command prompt ensuring within the right directory
+# Selecting option A runs the test suites with regards to V2.0 Option B runs the test suites with regards to V1.1 and Option C runs the test suites that were produced by the VC generator
 
-## Getting started
-
-Setup a virtual environment and install the project:
-```bash
-python3 -m venv venv
-. venv/bin/activate
-./install.sh
-
-```
-
-Run your first test
-```bash
-vc_test_suite '{"@context": ["https://www.w3.org/2018/credentials/v1"]}'
-
-```
-
-Example results
-```bash
-{
-  "conformant": false,
-  "required_score": "4/8",
-  "optional_score": "0/0",
-  "verifications": {
-    "@context": [
-      {
-        "statement": "Verifiable credentials MUST include a @context property.",
-        "required": true,
-        "pass": true
-      },
-      {
-        "statement": "The value of the @context property MUST be an ordered set.",
-        "required": true,
-        "pass": true
-      },
-      {
-        "statement": "The first item MUST be a URI with the value https://www.w3.org/2018/credentials/v1",
-        "required": true,
-        "pass": true
-      },
-      {
-        "statement": "Subsequent items MUST be composed of URLs and/or objects each processable as a JSON-LD Context.",
-        "required": true,
-        "pass": true
-      }
-    ],
-    "type": [
-      {
-        "statement": "Verifiable credentials MUST have a type property.",
-        "required": true,
-        "pass": false
-      }
-    ],
-    "issuer": [
-      {
-        "statement": "A verifiable credential MUST have an issuer property.",
-        "required": true,
-        "pass": false
-      }
-    ],
-    "issuanceDate": [
-      {
-        "statement": "A credential MUST have an issuanceDate property.",
-        "required": true,
-        "pass": false
-      }
-    ],
-    "credentialSubject": [
-      {
-        "statement": "A verifiable credential MUST have a credentialSubject property.",
-        "required": true,
-        "pass": false
-      }
-    ]
-  }
-}
-```
+# Note: To use the VC-Validator on the produced test cases of the VC-generator ensure the command for the VC-generator is entered first(As this produces the test cases)
